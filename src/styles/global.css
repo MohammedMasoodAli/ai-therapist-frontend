@@ -656,3 +656,108 @@ input::-webkit-list-button{
   font-style: italic;
 }
 
+/* ============================= */
+/* AI THERAPIST – SCI-FI LOGIN   */
+/* ============================= */
+
+/* Center everything on login screen */
+.login-container,
+.auth-container,
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #0f2027, #000000 70%);
+  overflow: hidden;
+}
+
+/* Subtle animated glow background */
+.login-container::before,
+.auth-container::before,
+.login-screen::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0,255,255,0.15), transparent 60%);
+  animation: pulseGlow 6s infinite ease-in-out;
+  z-index: 0;
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(0.9); opacity: 0.4; }
+  50% { transform: scale(1.05); opacity: 0.7; }
+  100% { transform: scale(0.9); opacity: 0.4; }
+}
+
+/* Title */
+.login-title,
+h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #e0ffff;
+  text-shadow:
+    0 0 10px rgba(0,255,255,0.4),
+    0 0 30px rgba(0,255,255,0.2);
+  margin-bottom: 30px;
+}
+
+/* Google Sign-In Button */
+.login-container button,
+.auth-container button,
+.login-screen button {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, #00f5ff, #00bcd4);
+  color: #001011;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 26px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow:
+    0 0 15px rgba(0,255,255,0.4),
+    inset 0 0 10px rgba(255,255,255,0.15);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.login-container button:hover,
+.auth-container button:hover,
+.login-screen button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 0 25px rgba(0,255,255,0.7),
+    inset 0 0 15px rgba(255,255,255,0.2);
+}
+
+/* Active / click */
+.login-container button:active,
+.auth-container button:active,
+.login-screen button:active {
+  transform: scale(0.98);
+}
+
+/* Optional helper text */
+.login-subtext {
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: rgba(200, 255, 255, 0.7);
+  letter-spacing: 0.5px;
+}
+
+/* Hide scrollbars on login page */
+.login-container::-webkit-scrollbar,
+.auth-container::-webkit-scrollbar,
+.login-screen::-webkit-scrollbar {
+  display: none;
+}
+
