@@ -90,7 +90,7 @@ export default function App() {
   const messages = chatHistory[activeDate] || [];
 
   const sendToAI = async (text) => {
-    const res = await fetch("https://nations-affiliate-nevada-dancing.trycloudflare.com/chat", {
+    const res = await fetch("https://std-efficient-sum-assume.trycloudflare.com/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
