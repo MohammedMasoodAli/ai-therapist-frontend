@@ -90,7 +90,7 @@ export default function App() {
   const messages = chatHistory[activeDate] || [];
 
   const sendToAI = async (text) => {
-    const res = await fetch("https://investor-jar-tips-absence.trycloudflare.com/chat", {
+    const res = await fetch("https://showing-stable-banners-immune.trycloudflare.com/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
